@@ -1,0 +1,1 @@
+this is b.txt in the original folder.
