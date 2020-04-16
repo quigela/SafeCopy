@@ -106,6 +106,7 @@ namespace SafeCopy
                     if (File.Exists(file))
                     {
                         File.Copy(file, backupFile, true);
+                        File.SetAttributes(backupFile, FileAttributes.Normal);
                     }
                 } 
                 catch (Exception e)
