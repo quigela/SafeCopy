@@ -53,9 +53,11 @@
             this.GroupSource.Controls.Add(this.ListSource);
             this.GroupSource.Controls.Add(this.LabelSource);
             this.GroupSource.Controls.Add(this.BtnBrowseSource);
-            this.GroupSource.Location = new System.Drawing.Point(13, 13);
+            this.GroupSource.Location = new System.Drawing.Point(10, 11);
+            this.GroupSource.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GroupSource.Name = "GroupSource";
-            this.GroupSource.Size = new System.Drawing.Size(600, 250);
+            this.GroupSource.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GroupSource.Size = new System.Drawing.Size(450, 203);
             this.GroupSource.TabIndex = 0;
             this.GroupSource.TabStop = false;
             this.GroupSource.Text = "Source";
@@ -63,25 +65,27 @@
             // ListSource
             // 
             this.ListSource.FormattingEnabled = true;
-            this.ListSource.ItemHeight = 16;
-            this.ListSource.Location = new System.Drawing.Point(7, 22);
+            this.ListSource.Location = new System.Drawing.Point(5, 18);
+            this.ListSource.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ListSource.Name = "ListSource";
-            this.ListSource.Size = new System.Drawing.Size(580, 180);
+            this.ListSource.Size = new System.Drawing.Size(436, 147);
             this.ListSource.TabIndex = 5;
             // 
             // LabelSource
             // 
             this.LabelSource.AutoSize = true;
-            this.LabelSource.Location = new System.Drawing.Point(6, 227);
+            this.LabelSource.Location = new System.Drawing.Point(4, 184);
+            this.LabelSource.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelSource.Name = "LabelSource";
-            this.LabelSource.Size = new System.Drawing.Size(0, 17);
+            this.LabelSource.Size = new System.Drawing.Size(0, 13);
             this.LabelSource.TabIndex = 4;
             // 
             // BtnBrowseSource
             // 
-            this.BtnBrowseSource.Location = new System.Drawing.Point(487, 204);
+            this.BtnBrowseSource.Location = new System.Drawing.Point(365, 166);
+            this.BtnBrowseSource.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnBrowseSource.Name = "BtnBrowseSource";
-            this.BtnBrowseSource.Size = new System.Drawing.Size(100, 40);
+            this.BtnBrowseSource.Size = new System.Drawing.Size(75, 32);
             this.BtnBrowseSource.TabIndex = 2;
             this.BtnBrowseSource.Text = "Browse...";
             this.BtnBrowseSource.UseVisualStyleBackColor = true;
@@ -92,9 +96,11 @@
             this.GroupDestintation.Controls.Add(this.ListDest);
             this.GroupDestintation.Controls.Add(this.LabelDest);
             this.GroupDestintation.Controls.Add(this.BtnBrowseDest);
-            this.GroupDestintation.Location = new System.Drawing.Point(619, 13);
+            this.GroupDestintation.Location = new System.Drawing.Point(464, 11);
+            this.GroupDestintation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GroupDestintation.Name = "GroupDestintation";
-            this.GroupDestintation.Size = new System.Drawing.Size(600, 250);
+            this.GroupDestintation.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GroupDestintation.Size = new System.Drawing.Size(450, 203);
             this.GroupDestintation.TabIndex = 1;
             this.GroupDestintation.TabStop = false;
             this.GroupDestintation.Text = "Destination";
@@ -102,25 +108,27 @@
             // ListDest
             // 
             this.ListDest.FormattingEnabled = true;
-            this.ListDest.ItemHeight = 16;
-            this.ListDest.Location = new System.Drawing.Point(6, 22);
+            this.ListDest.Location = new System.Drawing.Point(4, 18);
+            this.ListDest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ListDest.Name = "ListDest";
-            this.ListDest.Size = new System.Drawing.Size(580, 180);
+            this.ListDest.Size = new System.Drawing.Size(436, 147);
             this.ListDest.TabIndex = 6;
             // 
             // LabelDest
             // 
             this.LabelDest.AutoSize = true;
-            this.LabelDest.Location = new System.Drawing.Point(6, 227);
+            this.LabelDest.Location = new System.Drawing.Point(4, 184);
+            this.LabelDest.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelDest.Name = "LabelDest";
-            this.LabelDest.Size = new System.Drawing.Size(0, 17);
+            this.LabelDest.Size = new System.Drawing.Size(0, 13);
             this.LabelDest.TabIndex = 5;
             // 
             // BtnBrowseDest
             // 
-            this.BtnBrowseDest.Location = new System.Drawing.Point(486, 204);
+            this.BtnBrowseDest.Location = new System.Drawing.Point(364, 166);
+            this.BtnBrowseDest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnBrowseDest.Name = "BtnBrowseDest";
-            this.BtnBrowseDest.Size = new System.Drawing.Size(100, 40);
+            this.BtnBrowseDest.Size = new System.Drawing.Size(75, 32);
             this.BtnBrowseDest.TabIndex = 3;
             this.BtnBrowseDest.Text = "Browse...";
             this.BtnBrowseDest.UseVisualStyleBackColor = true;
@@ -131,9 +139,11 @@
             this.GroupBackup.Controls.Add(this.ListBackup);
             this.GroupBackup.Controls.Add(this.LabelBackup);
             this.GroupBackup.Controls.Add(this.BtnBrowseBackup);
-            this.GroupBackup.Location = new System.Drawing.Point(13, 269);
+            this.GroupBackup.Location = new System.Drawing.Point(10, 219);
+            this.GroupBackup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GroupBackup.Name = "GroupBackup";
-            this.GroupBackup.Size = new System.Drawing.Size(600, 250);
+            this.GroupBackup.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GroupBackup.Size = new System.Drawing.Size(450, 203);
             this.GroupBackup.TabIndex = 2;
             this.GroupBackup.TabStop = false;
             this.GroupBackup.Text = "Backup";
@@ -141,25 +151,27 @@
             // ListBackup
             // 
             this.ListBackup.FormattingEnabled = true;
-            this.ListBackup.ItemHeight = 16;
-            this.ListBackup.Location = new System.Drawing.Point(7, 22);
+            this.ListBackup.Location = new System.Drawing.Point(5, 18);
+            this.ListBackup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ListBackup.Name = "ListBackup";
-            this.ListBackup.Size = new System.Drawing.Size(580, 180);
+            this.ListBackup.Size = new System.Drawing.Size(436, 147);
             this.ListBackup.TabIndex = 5;
             // 
             // LabelBackup
             // 
             this.LabelBackup.AutoSize = true;
-            this.LabelBackup.Location = new System.Drawing.Point(6, 227);
+            this.LabelBackup.Location = new System.Drawing.Point(4, 184);
+            this.LabelBackup.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelBackup.Name = "LabelBackup";
-            this.LabelBackup.Size = new System.Drawing.Size(0, 17);
+            this.LabelBackup.Size = new System.Drawing.Size(0, 13);
             this.LabelBackup.TabIndex = 4;
             // 
             // BtnBrowseBackup
             // 
-            this.BtnBrowseBackup.Location = new System.Drawing.Point(487, 204);
+            this.BtnBrowseBackup.Location = new System.Drawing.Point(365, 166);
+            this.BtnBrowseBackup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnBrowseBackup.Name = "BtnBrowseBackup";
-            this.BtnBrowseBackup.Size = new System.Drawing.Size(100, 40);
+            this.BtnBrowseBackup.Size = new System.Drawing.Size(75, 32);
             this.BtnBrowseBackup.TabIndex = 2;
             this.BtnBrowseBackup.Text = "Browse...";
             this.BtnBrowseBackup.UseVisualStyleBackColor = true;
@@ -169,9 +181,10 @@
             // 
             this.BtnOperate.Enabled = false;
             this.BtnOperate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnOperate.Location = new System.Drawing.Point(1215, 409);
+            this.BtnOperate.Location = new System.Drawing.Point(918, 11);
+            this.BtnOperate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnOperate.Name = "BtnOperate";
-            this.BtnOperate.Size = new System.Drawing.Size(128, 113);
+            this.BtnOperate.Size = new System.Drawing.Size(96, 92);
             this.BtnOperate.TabIndex = 3;
             this.BtnOperate.Text = "Do";
             this.BtnOperate.UseVisualStyleBackColor = true;
@@ -180,32 +193,35 @@
             // TextLog
             // 
             this.TextLog.BackColor = System.Drawing.SystemColors.Info;
-            this.TextLog.Location = new System.Drawing.Point(628, 409);
+            this.TextLog.Location = new System.Drawing.Point(471, 237);
+            this.TextLog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TextLog.Name = "TextLog";
-            this.TextLog.Size = new System.Drawing.Size(565, 110);
+            this.TextLog.Size = new System.Drawing.Size(534, 185);
             this.TextLog.TabIndex = 4;
             this.TextLog.Text = "";
             // 
             // Shoutout
             // 
             this.Shoutout.AutoSize = true;
-            this.Shoutout.Location = new System.Drawing.Point(906, 330);
+            this.Shoutout.Location = new System.Drawing.Point(886, 219);
+            this.Shoutout.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Shoutout.Name = "Shoutout";
-            this.Shoutout.Size = new System.Drawing.Size(157, 17);
+            this.Shoutout.Size = new System.Drawing.Size(119, 13);
             this.Shoutout.TabIndex = 5;
             this.Shoutout.Text = "SafeCopy v1 by quigela";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1355, 534);
+            this.ClientSize = new System.Drawing.Size(1016, 434);
             this.Controls.Add(this.Shoutout);
             this.Controls.Add(this.TextLog);
             this.Controls.Add(this.BtnOperate);
             this.Controls.Add(this.GroupBackup);
             this.Controls.Add(this.GroupDestintation);
             this.Controls.Add(this.GroupSource);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.GroupSource.ResumeLayout(false);
