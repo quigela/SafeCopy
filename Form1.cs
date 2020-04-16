@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using System.IO;
 using System.Windows.Forms;
 
 namespace SafeCopy
@@ -62,6 +56,9 @@ namespace SafeCopy
                 Invoke((MethodInvoker)delegate
                 {
                     Log("Done!");
+                    BtnBrowseSource.Enabled = true;
+                    BtnBrowseDest.Enabled = true;
+                    BtnBrowseBackup.Enabled = true;
                     BtnOperate.Enabled = true;
                 });
             });
@@ -80,6 +77,7 @@ namespace SafeCopy
                 Invoke((MethodInvoker)delegate
                 {
                     ListBackup.Items.Clear();
+                    Log("Populating backup items...");
                 });
 
                 foreach (string s in files)
@@ -92,7 +90,6 @@ namespace SafeCopy
                 
             });
             t.Start();
-            Log("Populating backup items...");
         }
 
         private void OperateCheck()
@@ -130,7 +127,8 @@ namespace SafeCopy
 
         private void BrowseOperation(ListBox preview, Label labelPath, string pathKey)
         {
-            string path = DirUtils.SelectDirectory();
+            paths.TryGetValue(pathKey, out string initial);
+            string path = DirUtils.SelectDirectory(initial);
             if (path == null) { return; }
 
             Invoke((MethodInvoker)delegate {
