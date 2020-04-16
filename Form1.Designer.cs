@@ -28,192 +28,192 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupSource = new System.Windows.Forms.GroupBox();
-            this.listSource = new System.Windows.Forms.ListBox();
-            this.labelSource = new System.Windows.Forms.Label();
-            this.btnBrowseSource = new System.Windows.Forms.Button();
-            this.groupDestintation = new System.Windows.Forms.GroupBox();
-            this.listDest = new System.Windows.Forms.ListBox();
-            this.labelDest = new System.Windows.Forms.Label();
-            this.btnBrowseDest = new System.Windows.Forms.Button();
-            this.groupBackup = new System.Windows.Forms.GroupBox();
-            this.listBackup = new System.Windows.Forms.ListBox();
-            this.labelBackup = new System.Windows.Forms.Label();
-            this.btnBrowseBackup = new System.Windows.Forms.Button();
-            this.btnOperate = new System.Windows.Forms.Button();
-            this.textLog = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupSource.SuspendLayout();
-            this.groupDestintation.SuspendLayout();
-            this.groupBackup.SuspendLayout();
+            this.GroupSource = new System.Windows.Forms.GroupBox();
+            this.ListSource = new System.Windows.Forms.ListBox();
+            this.LabelSource = new System.Windows.Forms.Label();
+            this.BtnBrowseSource = new System.Windows.Forms.Button();
+            this.GroupDestintation = new System.Windows.Forms.GroupBox();
+            this.ListDest = new System.Windows.Forms.ListBox();
+            this.LabelDest = new System.Windows.Forms.Label();
+            this.BtnBrowseDest = new System.Windows.Forms.Button();
+            this.GroupBackup = new System.Windows.Forms.GroupBox();
+            this.ListBackup = new System.Windows.Forms.ListBox();
+            this.LabelBackup = new System.Windows.Forms.Label();
+            this.BtnBrowseBackup = new System.Windows.Forms.Button();
+            this.BtnOperate = new System.Windows.Forms.Button();
+            this.TextLog = new System.Windows.Forms.RichTextBox();
+            this.Shoutout = new System.Windows.Forms.Label();
+            this.GroupSource.SuspendLayout();
+            this.GroupDestintation.SuspendLayout();
+            this.GroupBackup.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupSource
+            // GroupSource
             // 
-            this.groupSource.Controls.Add(this.listSource);
-            this.groupSource.Controls.Add(this.labelSource);
-            this.groupSource.Controls.Add(this.btnBrowseSource);
-            this.groupSource.Location = new System.Drawing.Point(13, 13);
-            this.groupSource.Name = "groupSource";
-            this.groupSource.Size = new System.Drawing.Size(600, 250);
-            this.groupSource.TabIndex = 0;
-            this.groupSource.TabStop = false;
-            this.groupSource.Text = "Source";
+            this.GroupSource.Controls.Add(this.ListSource);
+            this.GroupSource.Controls.Add(this.LabelSource);
+            this.GroupSource.Controls.Add(this.BtnBrowseSource);
+            this.GroupSource.Location = new System.Drawing.Point(13, 13);
+            this.GroupSource.Name = "GroupSource";
+            this.GroupSource.Size = new System.Drawing.Size(600, 250);
+            this.GroupSource.TabIndex = 0;
+            this.GroupSource.TabStop = false;
+            this.GroupSource.Text = "Source";
             // 
-            // listSource
+            // ListSource
             // 
-            this.listSource.FormattingEnabled = true;
-            this.listSource.ItemHeight = 16;
-            this.listSource.Location = new System.Drawing.Point(7, 22);
-            this.listSource.Name = "listSource";
-            this.listSource.Size = new System.Drawing.Size(580, 180);
-            this.listSource.TabIndex = 5;
+            this.ListSource.FormattingEnabled = true;
+            this.ListSource.ItemHeight = 16;
+            this.ListSource.Location = new System.Drawing.Point(7, 22);
+            this.ListSource.Name = "ListSource";
+            this.ListSource.Size = new System.Drawing.Size(580, 180);
+            this.ListSource.TabIndex = 5;
             // 
-            // labelSource
+            // LabelSource
             // 
-            this.labelSource.AutoSize = true;
-            this.labelSource.Location = new System.Drawing.Point(6, 227);
-            this.labelSource.Name = "labelSource";
-            this.labelSource.Size = new System.Drawing.Size(0, 17);
-            this.labelSource.TabIndex = 4;
+            this.LabelSource.AutoSize = true;
+            this.LabelSource.Location = new System.Drawing.Point(6, 227);
+            this.LabelSource.Name = "LabelSource";
+            this.LabelSource.Size = new System.Drawing.Size(0, 17);
+            this.LabelSource.TabIndex = 4;
             // 
-            // btnBrowseSource
+            // BtnBrowseSource
             // 
-            this.btnBrowseSource.Location = new System.Drawing.Point(487, 204);
-            this.btnBrowseSource.Name = "btnBrowseSource";
-            this.btnBrowseSource.Size = new System.Drawing.Size(100, 40);
-            this.btnBrowseSource.TabIndex = 2;
-            this.btnBrowseSource.Text = "Browse...";
-            this.btnBrowseSource.UseVisualStyleBackColor = true;
-            this.btnBrowseSource.Click += new System.EventHandler(this.btnBrowseSource_Click);
+            this.BtnBrowseSource.Location = new System.Drawing.Point(487, 204);
+            this.BtnBrowseSource.Name = "BtnBrowseSource";
+            this.BtnBrowseSource.Size = new System.Drawing.Size(100, 40);
+            this.BtnBrowseSource.TabIndex = 2;
+            this.BtnBrowseSource.Text = "Browse...";
+            this.BtnBrowseSource.UseVisualStyleBackColor = true;
+            this.BtnBrowseSource.Click += new System.EventHandler(this.BtnBrowseSource_Click);
             // 
-            // groupDestintation
+            // GroupDestintation
             // 
-            this.groupDestintation.Controls.Add(this.listDest);
-            this.groupDestintation.Controls.Add(this.labelDest);
-            this.groupDestintation.Controls.Add(this.btnBrowseDest);
-            this.groupDestintation.Location = new System.Drawing.Point(619, 13);
-            this.groupDestintation.Name = "groupDestintation";
-            this.groupDestintation.Size = new System.Drawing.Size(600, 250);
-            this.groupDestintation.TabIndex = 1;
-            this.groupDestintation.TabStop = false;
-            this.groupDestintation.Text = "Destination";
+            this.GroupDestintation.Controls.Add(this.ListDest);
+            this.GroupDestintation.Controls.Add(this.LabelDest);
+            this.GroupDestintation.Controls.Add(this.BtnBrowseDest);
+            this.GroupDestintation.Location = new System.Drawing.Point(619, 13);
+            this.GroupDestintation.Name = "GroupDestintation";
+            this.GroupDestintation.Size = new System.Drawing.Size(600, 250);
+            this.GroupDestintation.TabIndex = 1;
+            this.GroupDestintation.TabStop = false;
+            this.GroupDestintation.Text = "Destination";
             // 
-            // listDest
+            // ListDest
             // 
-            this.listDest.FormattingEnabled = true;
-            this.listDest.ItemHeight = 16;
-            this.listDest.Location = new System.Drawing.Point(6, 22);
-            this.listDest.Name = "listDest";
-            this.listDest.Size = new System.Drawing.Size(580, 180);
-            this.listDest.TabIndex = 6;
+            this.ListDest.FormattingEnabled = true;
+            this.ListDest.ItemHeight = 16;
+            this.ListDest.Location = new System.Drawing.Point(6, 22);
+            this.ListDest.Name = "ListDest";
+            this.ListDest.Size = new System.Drawing.Size(580, 180);
+            this.ListDest.TabIndex = 6;
             // 
-            // labelDest
+            // LabelDest
             // 
-            this.labelDest.AutoSize = true;
-            this.labelDest.Location = new System.Drawing.Point(6, 227);
-            this.labelDest.Name = "labelDest";
-            this.labelDest.Size = new System.Drawing.Size(0, 17);
-            this.labelDest.TabIndex = 5;
+            this.LabelDest.AutoSize = true;
+            this.LabelDest.Location = new System.Drawing.Point(6, 227);
+            this.LabelDest.Name = "LabelDest";
+            this.LabelDest.Size = new System.Drawing.Size(0, 17);
+            this.LabelDest.TabIndex = 5;
             // 
-            // btnBrowseDest
+            // BtnBrowseDest
             // 
-            this.btnBrowseDest.Location = new System.Drawing.Point(486, 204);
-            this.btnBrowseDest.Name = "btnBrowseDest";
-            this.btnBrowseDest.Size = new System.Drawing.Size(100, 40);
-            this.btnBrowseDest.TabIndex = 3;
-            this.btnBrowseDest.Text = "Browse...";
-            this.btnBrowseDest.UseVisualStyleBackColor = true;
-            this.btnBrowseDest.Click += new System.EventHandler(this.btnBrowseDest_Click);
+            this.BtnBrowseDest.Location = new System.Drawing.Point(486, 204);
+            this.BtnBrowseDest.Name = "BtnBrowseDest";
+            this.BtnBrowseDest.Size = new System.Drawing.Size(100, 40);
+            this.BtnBrowseDest.TabIndex = 3;
+            this.BtnBrowseDest.Text = "Browse...";
+            this.BtnBrowseDest.UseVisualStyleBackColor = true;
+            this.BtnBrowseDest.Click += new System.EventHandler(this.BtnBrowseDest_Click);
             // 
-            // groupBackup
+            // GroupBackup
             // 
-            this.groupBackup.Controls.Add(this.listBackup);
-            this.groupBackup.Controls.Add(this.labelBackup);
-            this.groupBackup.Controls.Add(this.btnBrowseBackup);
-            this.groupBackup.Location = new System.Drawing.Point(13, 269);
-            this.groupBackup.Name = "groupBackup";
-            this.groupBackup.Size = new System.Drawing.Size(600, 250);
-            this.groupBackup.TabIndex = 2;
-            this.groupBackup.TabStop = false;
-            this.groupBackup.Text = "Backup";
+            this.GroupBackup.Controls.Add(this.ListBackup);
+            this.GroupBackup.Controls.Add(this.LabelBackup);
+            this.GroupBackup.Controls.Add(this.BtnBrowseBackup);
+            this.GroupBackup.Location = new System.Drawing.Point(13, 269);
+            this.GroupBackup.Name = "GroupBackup";
+            this.GroupBackup.Size = new System.Drawing.Size(600, 250);
+            this.GroupBackup.TabIndex = 2;
+            this.GroupBackup.TabStop = false;
+            this.GroupBackup.Text = "Backup";
             // 
-            // listBackup
+            // ListBackup
             // 
-            this.listBackup.FormattingEnabled = true;
-            this.listBackup.ItemHeight = 16;
-            this.listBackup.Location = new System.Drawing.Point(7, 22);
-            this.listBackup.Name = "listBackup";
-            this.listBackup.Size = new System.Drawing.Size(580, 180);
-            this.listBackup.TabIndex = 5;
+            this.ListBackup.FormattingEnabled = true;
+            this.ListBackup.ItemHeight = 16;
+            this.ListBackup.Location = new System.Drawing.Point(7, 22);
+            this.ListBackup.Name = "ListBackup";
+            this.ListBackup.Size = new System.Drawing.Size(580, 180);
+            this.ListBackup.TabIndex = 5;
             // 
-            // labelBackup
+            // LabelBackup
             // 
-            this.labelBackup.AutoSize = true;
-            this.labelBackup.Location = new System.Drawing.Point(6, 227);
-            this.labelBackup.Name = "labelBackup";
-            this.labelBackup.Size = new System.Drawing.Size(0, 17);
-            this.labelBackup.TabIndex = 4;
+            this.LabelBackup.AutoSize = true;
+            this.LabelBackup.Location = new System.Drawing.Point(6, 227);
+            this.LabelBackup.Name = "LabelBackup";
+            this.LabelBackup.Size = new System.Drawing.Size(0, 17);
+            this.LabelBackup.TabIndex = 4;
             // 
-            // btnBrowseBackup
+            // BtnBrowseBackup
             // 
-            this.btnBrowseBackup.Location = new System.Drawing.Point(487, 204);
-            this.btnBrowseBackup.Name = "btnBrowseBackup";
-            this.btnBrowseBackup.Size = new System.Drawing.Size(100, 40);
-            this.btnBrowseBackup.TabIndex = 2;
-            this.btnBrowseBackup.Text = "Browse...";
-            this.btnBrowseBackup.UseVisualStyleBackColor = true;
-            this.btnBrowseBackup.Click += new System.EventHandler(this.btnBrowseBackup_Click);
+            this.BtnBrowseBackup.Location = new System.Drawing.Point(487, 204);
+            this.BtnBrowseBackup.Name = "BtnBrowseBackup";
+            this.BtnBrowseBackup.Size = new System.Drawing.Size(100, 40);
+            this.BtnBrowseBackup.TabIndex = 2;
+            this.BtnBrowseBackup.Text = "Browse...";
+            this.BtnBrowseBackup.UseVisualStyleBackColor = true;
+            this.BtnBrowseBackup.Click += new System.EventHandler(this.BtnBrowseBackup_Click);
             // 
-            // btnOperate
+            // BtnOperate
             // 
-            this.btnOperate.Enabled = false;
-            this.btnOperate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOperate.Location = new System.Drawing.Point(1215, 409);
-            this.btnOperate.Name = "btnOperate";
-            this.btnOperate.Size = new System.Drawing.Size(128, 113);
-            this.btnOperate.TabIndex = 3;
-            this.btnOperate.Text = "Do";
-            this.btnOperate.UseVisualStyleBackColor = true;
-            this.btnOperate.Click += new System.EventHandler(this.btnOperate_Click);
+            this.BtnOperate.Enabled = false;
+            this.BtnOperate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnOperate.Location = new System.Drawing.Point(1215, 409);
+            this.BtnOperate.Name = "BtnOperate";
+            this.BtnOperate.Size = new System.Drawing.Size(128, 113);
+            this.BtnOperate.TabIndex = 3;
+            this.BtnOperate.Text = "Do";
+            this.BtnOperate.UseVisualStyleBackColor = true;
+            this.BtnOperate.Click += new System.EventHandler(this.BtnOperate_Click);
             // 
-            // textLog
+            // TextLog
             // 
-            this.textLog.BackColor = System.Drawing.SystemColors.Info;
-            this.textLog.Location = new System.Drawing.Point(628, 409);
-            this.textLog.Name = "textLog";
-            this.textLog.Size = new System.Drawing.Size(565, 110);
-            this.textLog.TabIndex = 4;
-            this.textLog.Text = "";
+            this.TextLog.BackColor = System.Drawing.SystemColors.Info;
+            this.TextLog.Location = new System.Drawing.Point(628, 409);
+            this.TextLog.Name = "TextLog";
+            this.TextLog.Size = new System.Drawing.Size(565, 110);
+            this.TextLog.TabIndex = 4;
+            this.TextLog.Text = "";
             // 
-            // label1
+            // Shoutout
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(906, 330);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 17);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "SafeCopy v1 by quigela";
+            this.Shoutout.AutoSize = true;
+            this.Shoutout.Location = new System.Drawing.Point(906, 330);
+            this.Shoutout.Name = "Shoutout";
+            this.Shoutout.Size = new System.Drawing.Size(157, 17);
+            this.Shoutout.TabIndex = 5;
+            this.Shoutout.Text = "SafeCopy v1 by quigela";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1355, 534);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textLog);
-            this.Controls.Add(this.btnOperate);
-            this.Controls.Add(this.groupBackup);
-            this.Controls.Add(this.groupDestintation);
-            this.Controls.Add(this.groupSource);
+            this.Controls.Add(this.Shoutout);
+            this.Controls.Add(this.TextLog);
+            this.Controls.Add(this.BtnOperate);
+            this.Controls.Add(this.GroupBackup);
+            this.Controls.Add(this.GroupDestintation);
+            this.Controls.Add(this.GroupSource);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.groupSource.ResumeLayout(false);
-            this.groupSource.PerformLayout();
-            this.groupDestintation.ResumeLayout(false);
-            this.groupDestintation.PerformLayout();
-            this.groupBackup.ResumeLayout(false);
-            this.groupBackup.PerformLayout();
+            this.GroupSource.ResumeLayout(false);
+            this.GroupSource.PerformLayout();
+            this.GroupDestintation.ResumeLayout(false);
+            this.GroupDestintation.PerformLayout();
+            this.GroupBackup.ResumeLayout(false);
+            this.GroupBackup.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,21 +221,21 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupSource;
-        private System.Windows.Forms.GroupBox groupDestintation;
-        private System.Windows.Forms.Label labelSource;
-        private System.Windows.Forms.Button btnBrowseSource;
-        private System.Windows.Forms.Label labelDest;
-        private System.Windows.Forms.Button btnBrowseDest;
-        private System.Windows.Forms.ListBox listSource;
-        private System.Windows.Forms.ListBox listDest;
-        private System.Windows.Forms.GroupBox groupBackup;
-        private System.Windows.Forms.ListBox listBackup;
-        private System.Windows.Forms.Label labelBackup;
-        private System.Windows.Forms.Button btnBrowseBackup;
-        private System.Windows.Forms.Button btnOperate;
-        private System.Windows.Forms.RichTextBox textLog;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox GroupSource;
+        private System.Windows.Forms.GroupBox GroupDestintation;
+        private System.Windows.Forms.Label LabelSource;
+        private System.Windows.Forms.Button BtnBrowseSource;
+        private System.Windows.Forms.Label LabelDest;
+        private System.Windows.Forms.Button BtnBrowseDest;
+        private System.Windows.Forms.ListBox ListSource;
+        private System.Windows.Forms.ListBox ListDest;
+        private System.Windows.Forms.GroupBox GroupBackup;
+        private System.Windows.Forms.ListBox ListBackup;
+        private System.Windows.Forms.Label LabelBackup;
+        private System.Windows.Forms.Button BtnBrowseBackup;
+        private System.Windows.Forms.Button BtnOperate;
+        private System.Windows.Forms.RichTextBox TextLog;
+        private System.Windows.Forms.Label Shoutout;
     }
 }
 
