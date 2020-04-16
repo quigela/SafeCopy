@@ -27,10 +27,14 @@ namespace SafeCopy
             }
         }
 
-        public static string SelectDirectory()
+        public static string SelectDirectory(string initial)
         {
             using (FolderBrowserDialog fbd = new FolderBrowserDialog())
             {
+                if (!string.IsNullOrWhiteSpace(initial))
+                {
+                    fbd.SelectedPath = initial;
+                }
                 DialogResult result = fbd.ShowDialog();
 
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
@@ -46,7 +50,7 @@ namespace SafeCopy
             string[] sourceFiles = GetSubItems(source, true);
             string[] destFiles = GetSubItems(dest, true);
 
-            return sourceFiles.Intersect(destFiles).ToArray<string>();
+            return sourceFiles.Intersect(destFiles, StringComparer.OrdinalIgnoreCase).ToArray<string>();
         }
 
         public static void DoOperation(string sourceDir, string destDir, string backupDir, Func<string, bool> log)
@@ -58,19 +62,31 @@ namespace SafeCopy
         private static void DoCopy(string sourceDir, string destDir, Func<string, bool> log)
         {
             log("Copying files from source to dest...");
-            //Now Create all of the directories
-            foreach (string dirPath in Directory.GetDirectories(sourceDir, "*",
-                SearchOption.AllDirectories))
-                Directory.CreateDirectory(dirPath.Replace(sourceDir, destDir));
+            try
+            {
+                //Now Create all of the directories
+                foreach (string dirPath in Directory.GetDirectories(sourceDir, "*", SearchOption.AllDirectories))
+                {
+                    Directory.CreateDirectory(dirPath.Replace(sourceDir, destDir));
+                }
 
-            //Copy all the files & Replaces any files with the same name
-            foreach (string newPath in Directory.GetFiles(sourceDir, "*.*",
-                SearchOption.AllDirectories))
-                File.Copy(newPath, newPath.Replace(sourceDir, destDir), true);
+                //Copy all the files & Replaces any files with the same name
+                foreach (string sourcePath in Directory.GetFiles(sourceDir, "*.*", SearchOption.AllDirectories))
+                {
+                    string destFile = sourcePath.Replace(sourceDir, destDir);
+                    File.Copy(sourcePath, destFile, true);
+                    File.SetAttributes(destFile, FileAttributes.Normal);
+                }
+            }
+            catch (Exception e)
+            {
+                log("Error occured: " + e.Message);
+            }
         }
 
         private static void DoBackup(string sourceDir, string destDir, string backupDir, Func<string, bool> log)
         {
+            log("Calculating directory intersection...");
             string[] overwrite = GetOverwriteItems(sourceDir, destDir);
             log("Copying overlapping files from dest to backup...");
 
@@ -85,10 +101,18 @@ namespace SafeCopy
                     Directory.CreateDirectory(backupSubDir);
                     log("Creating " + backupSubDir + "...");
                 }
-                if (File.Exists(file))
+                try
                 {
-                    File.Copy(file, backupFile, true);
+                    if (File.Exists(file))
+                    {
+                        File.Copy(file, backupFile, true);
+                    }
+                } 
+                catch (Exception e)
+                {
+                    log("Error occured: " + e.Message);
                 }
+                
             }
         }
     }
