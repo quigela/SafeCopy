@@ -14,7 +14,7 @@ namespace SafeCopy
 {
     public partial class Form1 : Form
     {
-        private Dictionary<string, string> paths = new Dictionary<string, string>()
+        private readonly Dictionary<string, string> paths = new Dictionary<string, string>()
         {
             {"source", null},
             {"dest", null},
@@ -25,31 +25,36 @@ namespace SafeCopy
             InitializeComponent();
         }
 
-        private void btnBrowseSource_Click(object sender, EventArgs e)
+        private void BtnBrowseSource_Click(object sender, EventArgs e)
         {
-            StartBrowseOperation(btnBrowseSource, listSource, labelSource, "source");
+            StartBrowseOperation(BtnBrowseSource, ListSource, LabelSource, "source");
         }
 
-        private void btnBrowseDest_Click(object sender, EventArgs e)
+        private void BtnBrowseDest_Click(object sender, EventArgs e)
         {
-            StartBrowseOperation(btnBrowseDest, listDest, labelDest, "dest");
+            StartBrowseOperation(BtnBrowseDest, ListDest, LabelDest, "dest");
         }
 
-        private void btnBrowseBackup_Click(object sender, EventArgs e)
+        private void BtnBrowseBackup_Click(object sender, EventArgs e)
         {
-            StartBrowseOperation(btnBrowseBackup, null, labelBackup, "backup");
+            StartBrowseOperation(BtnBrowseBackup, null, LabelBackup, "backup");
         }
 
-        private void btnOperate_Click(object sender, EventArgs e)
+        private void BtnOperate_Click(object sender, EventArgs e)
         {
-            string sourcePath, destPath, backupPath;
-            paths.TryGetValue("source", out sourcePath);
-            paths.TryGetValue("dest", out destPath);
-            paths.TryGetValue("backup", out backupPath);
-            if (string.IsNullOrWhiteSpace(sourcePath) ||
-                string.IsNullOrWhiteSpace(destPath) ||
-                string.IsNullOrWhiteSpace(backupPath)) { btnOperate.Enabled = false; return; }
-            btnOperate.Enabled = false;
+            paths.TryGetValue("source", out string sourcePath);
+            paths.TryGetValue("dest", out string destPath);
+            paths.TryGetValue("backup", out string backupPath);
+            if (ContainsNullOrWhitespace(sourcePath, destPath, backupPath))
+            {
+                BtnOperate.Enabled = false;
+                return;
+            }
+            
+            BtnBrowseSource.Enabled = false;
+            BtnBrowseDest.Enabled = false;
+            BtnBrowseBackup.Enabled = false;
+            BtnOperate.Enabled = false;
 
             Thread t = new Thread(() =>
             {
@@ -57,7 +62,7 @@ namespace SafeCopy
                 Invoke((MethodInvoker)delegate
                 {
                     Log("Done!");
-                    btnOperate.Enabled = true;
+                    BtnOperate.Enabled = true;
                 });
             });
             t.Start();
@@ -65,25 +70,23 @@ namespace SafeCopy
 
         private void BackupPreview()
         {
-            string sourcePath, destPath;
-            paths.TryGetValue("source", out sourcePath);
-            paths.TryGetValue("dest", out destPath);
-            if (string.IsNullOrWhiteSpace(sourcePath) ||
-                string.IsNullOrWhiteSpace(destPath)) { return; }
+            paths.TryGetValue("source", out string sourcePath);
+            paths.TryGetValue("dest", out string destPath);
+            if (ContainsNullOrWhitespace(sourcePath, destPath)) { return; }
 
             Thread t = new Thread(() =>
             {
                 string[] files = DirUtils.GetOverwriteItems(sourcePath, destPath);
                 Invoke((MethodInvoker)delegate
                 {
-                    listBackup.Items.Clear();
+                    ListBackup.Items.Clear();
                 });
 
                 foreach (string s in files)
                 {
                     Invoke((MethodInvoker)delegate
                     {
-                        listBackup.Items.Add(s);
+                        ListBackup.Items.Add(s);
                     });
                 }
                 
@@ -94,17 +97,18 @@ namespace SafeCopy
 
         private void OperateCheck()
         {
-            string sourcePath, destPath, backupPath;
-            paths.TryGetValue("source", out sourcePath);
-            paths.TryGetValue("dest", out destPath);
-            paths.TryGetValue("backup", out backupPath);
+            paths.TryGetValue("source", out string sourcePath);
+            paths.TryGetValue("dest", out string destPath);
+            paths.TryGetValue("backup", out string backupPath);
 
-            if (string.IsNullOrWhiteSpace(sourcePath) || 
-                string.IsNullOrWhiteSpace(destPath) || 
-                string.IsNullOrWhiteSpace(backupPath)) { btnOperate.Enabled = false; return; }
+            if (ContainsNullOrWhitespace(sourcePath, destPath, backupPath))
+            { 
+                    BtnOperate.Enabled = false; 
+                    return; 
+            }
 
             Log("Ready to backup & overwrite");
-            btnOperate.Enabled = true;
+            BtnOperate.Enabled = true;
         }
 
         private void StartBrowseOperation(Button browseButton, ListBox listPreview, Label labelPreview, string pathVar)
@@ -149,11 +153,17 @@ namespace SafeCopy
             }
         }
 
+        private bool ContainsNullOrWhitespace(params string[] data)
+        {
+            //invert because we want True if not all strings return true from the 'NotIsNullOrEmpty' check
+            return !(data.All(s => !string.IsNullOrWhiteSpace(s)));
+        }
+
         private bool Log(string msg)
         {
             Invoke((MethodInvoker)delegate
             {
-                textLog.Text += "[" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + "] " + msg + "\n";
+                TextLog.Text += "[" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + "] " + msg + "\n";
             });
             return true;
         }
